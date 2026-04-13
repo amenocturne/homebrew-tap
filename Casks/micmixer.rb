@@ -11,6 +11,18 @@ cask "micmixer" do
 
   app "MicMixer.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/MicMixer.app"]
+  end
+
+  caveats <<~EOS
+    MicMixer requires two macOS permissions on first launch:
+      - Screen & System Audio Recording (for capturing app audio)
+      - Microphone (for mixing in your mic)
+    Grant both when prompted, then click the menu bar icon to get started.
+  EOS
+
   zap trash: [
     "~/Library/Preferences/com.amenocturne.micmixer.plist",
   ]
