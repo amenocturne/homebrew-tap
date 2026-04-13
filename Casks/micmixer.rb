@@ -8,7 +8,6 @@ cask "micmixer" do
   homepage "https://github.com/amenocturne/mic-mixer"
 
   depends_on macos: ">= :sequoia"
-  depends_on cask: "blackhole-2ch"
 
   app "MicMixer.app"
 
