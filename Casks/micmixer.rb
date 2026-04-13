@@ -1,6 +1,6 @@
 cask "micmixer" do
   version "1.0.0"
-  sha256 "b2b2005227c2abaa1c407c82a2304a05efa061a91c6709199413127be32eab79"
+  sha256 "3015b2fe70f3ce9f1df08d22dcb23815e7e31cd6fd7eb22ad720ed7b57474579"
 
   url "https://github.com/amenocturne/mic-mixer/releases/download/v#{version}/MicMixer.app.zip"
   name "MicMixer"
