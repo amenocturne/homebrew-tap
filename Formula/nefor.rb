@@ -1,9 +1,9 @@
 class Nefor < Formula
   desc "Agent harness substrate — NCP-speaking engine with Lua composition"
   homepage "https://github.com/amenocturne/nefor"
-  url "https://github.com/amenocturne/nefor/releases/download/v0.1.1/nefor-aarch64-apple-darwin.tar.gz"
-  sha256 "4250f80ae9af6dcad9e4d91d4ff35ed3022a3a7e4936379f9023c7c439190f05"
-  version "0.1.1"
+  url "https://github.com/amenocturne/nefor/releases/download/v0.1.2/nefor-aarch64-apple-darwin.tar.gz"
+  sha256 "f4881af09533da6cc9deacdb3831e28557a0c53128b566b8ee20a1d1d6d443f1"
+  version "0.1.2"
   license "MIT"
 
   depends_on arch: :arm64
