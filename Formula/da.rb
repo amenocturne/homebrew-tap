@@ -1,9 +1,9 @@
 class Da < Formula
   desc "yes. — classify a bash command as approve/defer/deny under explicit policies"
   homepage "https://github.com/amenocturne/da"
-  url "https://github.com/amenocturne/da/releases/download/v0.0.0/da-aarch64-apple-darwin.tar.gz"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
-  version "0.0.0"
+  url "https://github.com/amenocturne/da/releases/download/v0.1.0/da-aarch64-apple-darwin.tar.gz"
+  sha256 "bd0fac590dea7dcbc0328e3832cc0949188cc7d69158fed31bb301956da1bea0"
+  version "0.1.0"
   license "MIT"
 
   depends_on arch: :arm64
