@@ -10,11 +10,6 @@ class Nefor < Formula
       url "https://github.com/amenocturne/nefor/releases/download/v0.1.3/nefor-aarch64-apple-darwin.tar.gz"
       sha256 "876cac5c34e84280e3a81d3603670ebe886eb18ae4a7add06149d8c63a0c1702"
     end
-    on_intel do
-      # slot: MACOS_X86_64
-      url "https://github.com/amenocturne/nefor/releases/download/v0.1.3/nefor-x86_64-apple-darwin.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
-    end
   end
 
   on_linux do
