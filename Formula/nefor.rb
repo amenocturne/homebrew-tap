@@ -8,7 +8,7 @@ class Nefor < Formula
     on_arm do
       # slot: MACOS_ARM64
       url "https://github.com/amenocturne/nefor/releases/download/v0.2.0/nefor-aarch64-apple-darwin.tar.gz"
-      sha256 "09f98ba00704fbc2a581c4daa2f1663f49a3a783af3a4857242431f8d266d7bb"
+      sha256 "8aa0bcd67461b6ce2185c05eb838a595cde96ecb8251b8264d9539f0927eb138"
     end
   end
 
@@ -16,12 +16,12 @@ class Nefor < Formula
     on_intel do
       # slot: LINUX_X86_64
       url "https://github.com/amenocturne/nefor/releases/download/v0.2.0/nefor-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "60c5eb322ca6a5fe42eb259c7c2e899e5a67db28eca7300042f03d7206acfa24"
+      sha256 "6824401fd626dc5dab3149b38b09c8ee1afc581ccc253a9772fb216fe24f0c90"
     end
     on_arm do
       # slot: LINUX_ARM64
       url "https://github.com/amenocturne/nefor/releases/download/v0.2.0/nefor-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "3c6ea734f00e38440b45a4281db2d6e8d92e45909edf39cd2fbf8635f682b9df"
+      sha256 "45dc7eae24ff68a5ce83b4c715143e1a0adf658a330059de997ce9a79333dad0"
     end
   end
 
