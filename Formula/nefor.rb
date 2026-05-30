@@ -1,27 +1,27 @@
 class Nefor < Formula
   desc "Agent harness substrate — NCP-speaking engine with Lua composition"
   homepage "https://github.com/amenocturne/nefor"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     on_arm do
       # slot: MACOS_ARM64
-      url "https://github.com/amenocturne/nefor/releases/download/v0.2.1/nefor-aarch64-apple-darwin.tar.gz"
-      sha256 "bdb29d9b91ae7fe46096c3f9b228851ba2612ba0fe22a23d556b566298a34259"
+      url "https://github.com/amenocturne/nefor/releases/download/v0.2.2/nefor-aarch64-apple-darwin.tar.gz"
+      sha256 "0d941e729eee3dd10bff41bd010884634e387425a05d00737cd25edbf6905b34"
     end
   end
 
   on_linux do
     on_intel do
       # slot: LINUX_X86_64
-      url "https://github.com/amenocturne/nefor/releases/download/v0.2.1/nefor-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "943ea9c98c03625742efe51bbdcfc8b400babf0f6866c238c18b081f4cd49047"
+      url "https://github.com/amenocturne/nefor/releases/download/v0.2.2/nefor-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "69f3424308bd8020f51ae7cce683e28ae52a2a4505189cd982f24a49dfd9864d"
     end
     on_arm do
       # slot: LINUX_ARM64
-      url "https://github.com/amenocturne/nefor/releases/download/v0.2.1/nefor-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "e9a0996a7442bd6115411092a488b5a8d8099206c77748ee8476767051938ae5"
+      url "https://github.com/amenocturne/nefor/releases/download/v0.2.2/nefor-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "ca1adc272b2e9ff9fb80f3bd16cf03bb3ca0381825e0547aadc2b02cff5c24b6"
     end
   end
 
