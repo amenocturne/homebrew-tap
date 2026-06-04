@@ -1,8 +1,15 @@
 class Nefor < Formula
-  desc "Agent harness substrate — NCP-speaking engine with Lua composition"
+  desc "Agentic runtime with Lua-composed tools, providers, and workflows"
   homepage "https://github.com/amenocturne/nefor"
   version "0.3.0"
   license "MIT"
+
+  # `brew install --HEAD amenocturne/tap/nefor` builds the latest main
+  # commit from source. Mirrors `just install-nefor source` semantics.
+  head do
+    url "https://github.com/amenocturne/nefor.git", branch: "main"
+    depends_on "rust" => :build
+  end
 
   on_macos do
     on_arm do
@@ -25,24 +32,15 @@ class Nefor < Formula
     end
   end
 
-  # `brew install --HEAD amenocturne/tap/nefor` builds the latest main
-  # commit from source. Mirrors `just install-nefor source` semantics.
-  head do
-    url "https://github.com/amenocturne/nefor.git", branch: "main"
-    depends_on "rust" => :build
-  end
-
   def install
     if build.head?
-      # HEAD path: cargo build the workspace, then install binaries +
-      # starter into Homebrew's prefix. Matches the tarball layout so
-      # the engine resolver finds plugins via exe_relative_share_plugins.
-      system "cargo", "build", "--release", "--workspace", "--locked"
-      bin.install "target/release/nefor"
+      system "cargo", "install", *std_cargo_args(path: "engine")
+      plugin_root = buildpath/"homebrew-plugin-root"
       %w[basic-tools generic-provider generic-tool mock-plugin
          nefor-combinators nefor-tui openai-provider
          reasoner-graph tool-gate].each do |p|
-        (share/"nefor/plugins").install "target/release/#{p}"
+        system "cargo", "install", *std_cargo_args(root: plugin_root, path: "plugins/#{p}")
+        (share/"nefor/plugins").install plugin_root/"bin/#{p}"
       end
       (share/"nefor/starter").install Dir["starter/*"]
       share.install "LICENSE", "README.md"
@@ -66,6 +64,6 @@ class Nefor < Formula
   end
 
   test do
-    assert_match "nefor", shell_output("#{bin}/nefor --version 2>&1", 0)
+    assert_match "nefor", shell_output("#{bin}/nefor --version 2>&1")
   end
 end
