@@ -1,7 +1,7 @@
 class Nefor < Formula
   desc "Agentic runtime with Lua-composed tools, providers, and workflows"
   homepage "https://github.com/amenocturne/nefor"
-  version "0.4.0"
+  version "0.7.2"
   license "MIT"
 
   # `brew install --HEAD amenocturne/tap/nefor` builds the latest main
@@ -14,21 +14,21 @@ class Nefor < Formula
   on_macos do
     on_arm do
       # slot: MACOS_ARM64
-      url "https://github.com/amenocturne/nefor/releases/download/v0.4.0/nefor-aarch64-apple-darwin.tar.gz"
-      sha256 "5e6922bead8ed39424c49e510a36a6bb88e90e4eeaeba68143c3b51522dc9cfc"
+      url "https://github.com/amenocturne/nefor/releases/download/v0.7.2/nefor-aarch64-apple-darwin.tar.gz"
+      sha256 "27763ce452be7c19b89df4517a10adebfce777af4acea72e6f7d9ab68c0d587e"
     end
   end
 
   on_linux do
     on_intel do
       # slot: LINUX_X86_64
-      url "https://github.com/amenocturne/nefor/releases/download/v0.4.0/nefor-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "c2bed9404aec3114ec6a80a00a2e9fb32c955d2199c973b73b15b3ff627c3369"
+      url "https://github.com/amenocturne/nefor/releases/download/v0.7.2/nefor-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "7e9c80ba179f7a5fcc47e41a1312bfb9883ce791ab25be4ef9336815f72ca28f"
     end
     on_arm do
       # slot: LINUX_ARM64
-      url "https://github.com/amenocturne/nefor/releases/download/v0.4.0/nefor-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "8f16a4b35e551891714c44631f2ee0ec51e57b8c064292a12e713bb7cfd08e95"
+      url "https://github.com/amenocturne/nefor/releases/download/v0.7.2/nefor-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "70b5279bff93189d7e674b61abcb189a3fca094043e91d78ba5976f3e0502d9b"
     end
   end
 
